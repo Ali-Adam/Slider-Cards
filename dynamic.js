@@ -13,7 +13,7 @@ function emptyPage (){
     for (let i = 0; i < allCards.length; i++){
         allCards[i].style.display = 'none';
     }
-}emptyPage ();
+}
 
 // default page ...
 function stardefault () {
