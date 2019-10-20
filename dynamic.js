@@ -1,4 +1,5 @@
 
+
 let allCards = document.querySelectorAll('.main-card');
 
 var nextBtn = document.getElementById('next-btn');
@@ -42,22 +43,18 @@ function leftShow () {
 
 
 
-// Previous button EventListener ...
-prevBtn.addEventListener('click', function (){
-    if (index === 0) {
-        index =  allCards.length;
-    }
-    leftShow();
-});
 
+ prevBtn.addEventListener('click', () => {
+     index = (index === 0) ? index = allCards.length : index ; 
+     
+     leftShow();  
+   });                 
+  
+                         
 
-// Next button EventListener ...
-nextBtn.addEventListener('click', function (){
-    if (index === allCards.length - 1) {
-        index = -1;
-
-    }
-    rightShow();
-});
-
-stardefault (); // call  the default function ..
+nextBtn.addEventListener('click', function () {
+     (index === allCards.length-1 ) ? index = -1 : index ; 
+     
+     rightShow();  
+   });                 
+  
