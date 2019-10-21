@@ -1,5 +1,4 @@
 
-
 let allCards = document.querySelectorAll('.main-card');
 
 var nextBtn = document.getElementById('next-btn');
@@ -23,8 +22,6 @@ function stardefault () {
 
 //****************
 
-
-
 // show the right side ...
 function rightShow () {
     emptyPage ();
@@ -41,20 +38,20 @@ function leftShow () {
 
 //***********************
 
-
-
-
+// call the previous card when click on prev ...
  prevBtn.addEventListener('click', () => {
-     index = (index === 0) ? index = allCards.length : index ; 
-     
-     leftShow();  
-   });                 
-  
-                         
+     index = (index === 0) ? index = allCards.length : index ;
 
+     leftShow();
+   });
+
+
+// call the next card when click on next ...
 nextBtn.addEventListener('click', function () {
-     (index === allCards.length-1 ) ? index = -1 : index ; 
-     
-     rightShow();  
-   });                 
-  
+     (index === allCards.length-1 ) ? index = -1 : index ;
+
+     rightShow();
+   });
+
+
+stardefault (); // call  the default function ..
